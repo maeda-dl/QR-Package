@@ -4,7 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>⑨ FAQ＋問い合わせ</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:#fefefe;color:#333;}
+    header {background:#4CAF50;color:white;text-align:center;padding:16px 0;font-size:1.4em;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);}
+    .container {padding:20px 15px;}
+    h1{text-align:center;font-size:1.3em;margin-bottom:12px;color:#333;}
+    p.description{text-align:center;font-size:0.95em;margin-bottom:25px;line-height:1.5;color:#666;}
+    form{display:flex;flex-direction:column;gap:14px;}
+    input,textarea{width:100%;padding:12px 15px;font-size:0.95em;border-radius:10px;border:1px solid #ccc;box-sizing:border-box;transition:all 0.3s;}
+    textarea{min-height:90px;resize:vertical;}
+    input:focus,textarea:focus{border-color:#4CAF50;box-shadow:0 0 8px rgba(76,175,80,0.2);}
+    button{background:linear-gradient(45deg,#4CAF50,#66BB6A);color:white;font-size:1em;font-weight:bold;padding:12px 0;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:all 0.3s;}
+    button:hover{background:linear-gradient(45deg,#388E3C,#43A047);transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    .faq-item{margin-bottom:15px;border-bottom:1px solid #ccc;padding-bottom:8px;}
+    .faq-question{font-weight:bold;color:#333;cursor:pointer;}
+    .faq-answer{display:none;margin-top:6px;color:#555;}
+    a.back{display:block;text-align:center;margin-top:25px;color:#2196F3;font-weight:bold;text-decoration:none;font-size:0.95em;}
+    a.back:hover{text-decoration:underline;}
+    .footer{background:#f0f0f0;padding:18px 10px;text-align:center;font-size:0.8em;color:#555;margin-top:30px;}
+    .footer a{color:#2196F3;text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .sns-icons{margin-top:10px;}
+    .sns-icons a{margin:0 6px;display:inline-block;transition:transform 0.2s;}
+    .sns-icons a img{width:28px;height:28px;display:block;}
+    .sns-icons a:hover{transform:scale(1.2);}
+    @media(max-width:375px){h1{font-size:1.15em;}p.description{font-size:0.9em;}button{font-size:0.95em;}}
+  </style>
 </head>
 <body>
 
@@ -12,9 +37,16 @@
 
 <div class="container">
   <h1>よくある質問とお問い合わせ</h1>
-  <p class="description">
-    FAQをご覧いただき、さらに質問があればお問い合わせフォームから送信できます。
-  </p>
+  <p class="description">疑問点があれば、まずFAQをご確認ください。それでも解決しない場合はお問い合わせください。</p>
+
+  <div class="faq-item">
+    <div class="faq-question">Q1: 商品はいつ届きますか？</div>
+    <div class="faq-answer">通常、ご注文から3〜5営業日以内に発送されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Q2: 返品は可能ですか？</div>
+    <div class="faq-answer">未開封の商品に限り、購入後7日以内であれば返品可能です。</div>
+  </div>
 
   <form>
     <input type="text" placeholder="お名前">
@@ -35,6 +67,15 @@
     <a href="https://line.me" target="_blank"><img src="assets/img/line.png" alt="LINE"></a>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const ans = q.nextElementSibling;
+    ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
 
 </body>
 </html>
