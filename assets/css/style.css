@@ -107,19 +107,21 @@ a.back:hover {
 }
 
 .sns-icons {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
-.sns-icons a {
-  margin: 0 5px;
-  font-size: 1.2em;
-  display: inline-block;
+.sns-icon {
+  width: 30px;      /* アイコンサイズ */
+  height: 30px;
+  margin: 0 6px;
+  vertical-align: middle;
   transition: transform 0.2s;
 }
 
-.sns-icons a:hover {
+.sns-icon:hover {
   transform: scale(1.2);
 }
+
 
 /* レスポンシブ */
 @media (max-width: 375px) {
