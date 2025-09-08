@@ -4,20 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>⑩ 限定コンテンツ・キャンペーン</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:#fefefe;color:#333;}
+    header {background:#4CAF50;color:white;text-align:center;padding:16px 0;font-size:1.4em;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);}
+    .container {padding:20px 15px;}
+    h1{text-align:center;font-size:1.3em;margin-bottom:12px;color:#333;}
+    p.description{text-align:center;font-size:0.95em;margin-bottom:25px;line-height:1.5;color:#666;}
+    .campaign-box{background:#e8f5e9;padding:15px;border-radius:12px;text-align:center;margin-bottom:20px;box-shadow:0 3px 6px rgba(0,0,0,0.05);}
+    button{background:linear-gradient(45deg,#4CAF50,#66BB6A);color:white;font-size:1em;font-weight:bold;padding:12px 0;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:all 0.3s;width:100%;}
+    button:hover{background:linear-gradient(45deg,#388E3C,#43A047);transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    a.back{display:block;text-align:center;margin-top:25px;color:#2196F3;font-weight:bold;text-decoration:none;font-size:0.95em;}
+    a.back:hover{text-decoration:underline;}
+    .footer{background:#f0f0f0;padding:18px 10px;text-align:center;font-size:0.8em;color:#555;margin-top:30px;}
+    .footer a{color:#2196F3;text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .sns-icons{margin-top:10px;}
+    .sns-icons a{margin:0 6px;display:inline-block;transition:transform 0.2s;}
+    .sns-icons a img{width:28px;height:28px;display:block;}
+    .sns-icons a:hover{transform:scale(1.2);}
+    @media(max-width:375px){h1{font-size:1.15em;}p.description{font-size:0.9em;}button{font-size:0.95em;}}
+  </style>
 </head>
 <body>
 
 <header>⑩ 限定コンテンツ・キャンペーン</header>
 
 <div class="container">
-  <h1>特別なキャンペーン情報</h1>
-  <p class="description">
-    限定コンテンツやキャンペーンをチェックして、お得情報をゲット！
-  </p>
+  <h1>限定キャンペーンに参加しよう！</h1>
+  <p class="description">特別なコンテンツやキャンペーンに参加して、豪華特典をゲット！</p>
 
-  <div style="text-align:center; margin:20px 0;">
-    <button>詳細を見る</button>
+  <div class="campaign-box">
+    <p>今だけ！新商品購入で限定ノベルティプレゼント</p>
+    <button>キャンペーンに参加する</button>
+  </div>
+
+  <div class="campaign-box">
+    <p>LINE登録で限定クーポンをプレゼント</p>
+    <button>参加する</button>
   </div>
 
   <a class="back" href="index.html">← ホームへ戻る</a>
