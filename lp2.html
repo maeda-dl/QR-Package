@@ -7,22 +7,51 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>② くじ引き</h1>
-  </header>
-  <div class="container" style="text-align:center;">
-    <img src="assets/img/lottery.jpg" alt="くじ引き" class="hero">
-    <p>ボタンを押して今日の運試し！</p>
-    <button onclick="draw()">くじを引く</button>
-    <p id="result"></p>
-    <a class="back" href="index.html">← ホームへ戻る</a>
+
+<header>② くじ引き</header>
+
+<div class="container">
+  <h1>運試し！くじ引きにチャレンジ</h1>
+  <p class="description">
+    今日の運勢をくじでチェック！<br>
+    簡単に楽しめるくじ引きです。
+  </p>
+
+  <div style="text-align:center; margin:20px 0;">
+    <button id="drawBtn">くじを引く</button>
   </div>
-  <script>
-    function draw() {
-      const results = ["大吉 🎉", "中吉 😊", "小吉 🙂", "吉 😌", "凶 😱"];
-      const result = results[Math.floor(Math.random() * results.length)];
-      document.getElementById("result").innerText = "結果: " + result;
-    }
-  </script>
+
+  <p id="result" style="text-align:center; font-size:1em; color:#4CAF50; font-weight:bold;"></p>
+
+  <a class="back" href="index.html">← ホームへ戻る</a>
+</div>
+
+<!-- フッター共通 -->
+<div class="footer">
+  <p>株式会社サンプル商事</p>
+  <p>〒123-4567 東京都港区芝公園1-2-3</p>
+  <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
+  <div class="sns-icons">
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="assets/img/insta.png" alt="Instagram">
+    </a>
+    <a href="https://line.me" target="_blank">
+      <img src="assets/img/line.png" alt="LINE">
+    </a>
+  </div>
+</div>
+
+<script>
+  // 簡単なくじ引きスクリプト
+  const drawBtn = document.getElementById('drawBtn');
+  const result = document.getElementById('result');
+  const prizes = ['大吉', '中吉', '小吉', '吉', '末吉'];
+
+  drawBtn.addEventListener('click', () => {
+    const randIndex = Math.floor(Math.random() * prizes.length);
+    result.textContent = `結果: ${prizes[randIndex]}`;
+  });
+</script>
+
 </body>
 </html>
