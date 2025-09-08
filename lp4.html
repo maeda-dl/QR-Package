@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>④ レビュー投稿</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>④ レビュー投稿</h1>
+  </header>
+  <div class="container">
+    <img src="assets/img/review.jpg" alt="レビュー" class="hero">
+    <p>ご購入商品のレビューを投稿してください。</p>
+    <form>
+      <label>ニックネーム:<br><input type="text" name="name"></label><br>
+      <label>評価:<br>
+        <select name="rating">
+          <option>★★★★★</option>
+          <option>★★★★☆</option>
+          <option>★★★☆☆</option>
+          <option>★★☆☆☆</option>
+          <option>★☆☆☆☆</option>
+        </select>
+      </label><br>
+      <label>コメント:<br><textarea name="review"></textarea></label><br>
+      <button type="submit">投稿する</button>
+    </form>
+    <a class="back" href="index.html">← ホームへ戻る</a>
+  </div>
+</body>
+</html>
