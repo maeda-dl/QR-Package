@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ホームメニュー</title>
+  <title>ランディングページ集</title>
   <style>
     body {
       font-family: sans-serif;
-      text-align: center;
       background: #f5f5f5;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      margin-bottom: 20px;
+    header {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
     }
     .menu {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      max-width: 800px;
-      margin: auto;
+      gap: 10px;
+      padding: 20px;
     }
     .menu a {
       display: block;
@@ -27,28 +29,216 @@
       background: #4CAF50;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
-      font-size: 16px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
       transition: 0.3s;
     }
     .menu a:hover {
       background: #388E3C;
     }
+    section {
+      display: none;
+      padding: 20px;
+      background: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    h1 { margin-top: 0; }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #2196F3;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    textarea, input, select {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0 15px;
+    }
   </style>
 </head>
 <body>
-  <h1>メインメニュー</h1>
-  <div class="menu">
-    <a href="lp1.html">① 購買アンケート</a>
-    <a href="lp2.html">② くじ引き</a>
-    <a href="lp3.html">③ クーポン配布</a>
-    <a href="lp4.html">④ レビュー投稿</a>
-    <a href="lp5.html">⑤ 友達紹介</a>
-    <a href="lp6.html">⑥ LINE/メルマガ登録</a>
-    <a href="lp7.html">⑦ 商品モニター募集</a>
-    <a href="lp8.html">⑧ 診断コンテンツ</a>
-    <a href="lp9.html">⑨ FAQ＋問い合わせ</a>
-    <a href="lp10.html">⑩ 限定コンテンツ・キャンペーン</a>
+  <header>
+    <h1>ホームメニュー</h1>
+  </header>
+
+  <!-- メニュー -->
+  <div class="menu" id="homeMenu">
+    <a href="#" onclick="showPage('lp1')">① 購買アンケート</a>
+    <a href="#" onclick="showPage('lp2')">② くじ引き</a>
+    <a href="#" onclick="showPage('lp3')">③ クーポン配布</a>
+    <a href="#" onclick="showPage('lp4')">④ レビュー投稿</a>
+    <a href="#" onclick="showPage('lp5')">⑤ 友達紹介</a>
+    <a href="#" onclick="showPage('lp6')">⑥ LINE/メルマガ登録</a>
+    <a href="#" onclick="showPage('lp7')">⑦ 商品モニター募集</a>
+    <a href="#" onclick="showPage('lp8')">⑧ 診断コンテンツ</a>
+    <a href="#" onclick="showPage('lp9')">⑨ FAQ＋問い合わせ</a>
+    <a href="#" onclick="showPage('lp10')">⑩ 限定コンテンツ・キャンペーン</a>
   </div>
+
+  <!-- ① 購買アンケート -->
+  <section id="lp1">
+    <h1>① 購買アンケート</h1>
+    <p>お客様の声をお聞かせください。商品改善・サービス向上に活かします。</p>
+    <form>
+      <label>購入商品名:<br><input type="text" name="product"></label><br>
+      <label>満足度:<br>
+        <select name="satisfaction">
+          <option>とても満足</option>
+          <option>満足</option>
+          <option>普通</option>
+          <option>不満</option>
+        </select>
+      </label><br>
+      <label>ご意見:<br><textarea name="feedback"></textarea></label><br>
+      <button type="submit">送信する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ② くじ引き -->
+  <section id="lp2">
+    <h1>② くじ引き</h1>
+    <p>ボタンを押して今日の運試し！</p>
+    <button onclick="draw()">くじを引く</button>
+    <p id="result"></p>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ③ クーポン配布 -->
+  <section id="lp3">
+    <h1>③ クーポン配布</h1>
+    <p>特別クーポンをプレゼント！</p>
+    <p><strong>クーポンコード: SAVE10</strong></p>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ④ レビュー投稿 -->
+  <section id="lp4">
+    <h1>④ レビュー投稿</h1>
+    <p>商品のレビューを投稿していただけます。</p>
+    <form>
+      <label>お名前:<br><input type="text" name="name"></label><br>
+      <label>レビュー:<br><textarea name="review"></textarea></label><br>
+      <button type="submit">投稿する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑤ 友達紹介 -->
+  <section id="lp5">
+    <h1>⑤ 友達紹介</h1>
+    <p>お友達を紹介すると特典があります！</p>
+    <form>
+      <label>友達のメールアドレス:<br><input type="email" name="friend"></label><br>
+      <button type="submit">紹介する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑥ LINE/メルマガ登録 -->
+  <section id="lp6">
+    <h1>⑥ LINE/メルマガ登録</h1>
+    <p>最新情報をお届けします。ぜひご登録ください！</p>
+    <form>
+      <label>メールアドレス:<br><input type="email" name="email"></label><br>
+      <button type="submit">登録する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑦ 商品モニター募集 -->
+  <section id="lp7">
+    <h1>⑦ 商品モニター募集</h1>
+    <p>新商品をお試しいただけるモニターを募集中！</p>
+    <form>
+      <label>お名前:<br><input type="text" name="name"></label><br>
+      <label>ご希望商品:<br><input type="text" name="item"></label><br>
+      <button type="submit">応募する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑧ 診断コンテンツ -->
+  <section id="lp8">
+    <h1>⑧ 診断コンテンツ</h1>
+    <p>いくつかの質問に答えておすすめ商品をチェック！</p>
+    <form onsubmit="diagnose(event)">
+      <label>好きな色は？<br>
+        <select id="color">
+          <option value="red">赤</option>
+          <option value="blue">青</option>
+          <option value="green">緑</option>
+        </select>
+      </label><br>
+      <button type="submit">診断する</button>
+    </form>
+    <p id="diagnosis"></p>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑨ FAQ＋問い合わせ -->
+  <section id="lp9">
+    <h1>⑨ FAQ＋問い合わせ</h1>
+    <h3>よくある質問</h3>
+    <p><strong>Q:</strong> 商品の発送にはどのくらいかかりますか？<br>
+       <strong>A:</strong> 通常3〜5営業日以内に発送いたします。</p>
+
+    <h3>お問い合わせ</h3>
+    <form>
+      <label>お名前:<br><input type="text" name="name"></label><br>
+      <label>お問い合わせ内容:<br><textarea name="question"></textarea></label><br>
+      <button type="submit">送信する</button>
+    </form>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <!-- ⑩ 限定コンテンツ・キャンペーン -->
+  <section id="lp10">
+    <h1>⑩ 限定コンテンツ・キャンペーン</h1>
+    <p>今だけの特別キャンペーンをお見逃しなく！</p>
+    <ul>
+      <li>限定動画配信</li>
+      <li>先着100名にプレゼント</li>
+      <li>キャンペーン期間: 9/10〜9/30</li>
+    </ul>
+    <a class="back" href="#" onclick="goHome()">← ホームへ戻る</a>
+  </section>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById("homeMenu").style.display = "none";
+      document.getElementById(id).classList.add("active");
+    }
+    function goHome() {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById("homeMenu").style.display = "grid";
+    }
+    function draw() {
+      const results = ["大吉 🎉", "中吉 😊", "小吉 🙂", "吉 😌", "凶 😱"];
+      const result = results[Math.floor(Math.random() * results.length)];
+      document.getElementById("result").innerText = "結果: " + result;
+    }
+    function diagnose(e) {
+      e.preventDefault();
+      const color = document.getElementById("color").value;
+      let message = "";
+      if (color === "red") message = "あなたには情熱的な商品がおすすめ！";
+      if (color === "blue") message = "あなたには爽やかな商品がおすすめ！";
+      if (color === "green") message = "あなたには自然派商品がおすすめ！";
+      document.getElementById("diagnosis").innerText = message;
+    }
+  </script>
 </body>
 </html>
