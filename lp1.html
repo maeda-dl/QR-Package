@@ -4,29 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>① 購買アンケート</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 1.2em;
+    }
+
+    .container {
+      padding: 15px;
+    }
+
+    img.hero {
+      width: 100%;
+      max-width: 350px;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 1.3em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 0.95em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #388E3C;
+    }
+
+    a.back {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #2196F3;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 375px) {
+      h1 { font-size: 1.1em; }
+      p { font-size: 0.9em; }
+      button { font-size: 0.95em; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>① 購買アンケート</h1>
-  </header>
+  <header>① 購買アンケート</header>
+
   <div class="container">
     <img src="assets/img/shopping.jpg" alt="購買アンケート" class="hero">
-    <p>お客様の声をお聞かせください。商品改善・サービス向上に活かします。</p>
+    <p>お客様の声をお聞かせください。<br>商品改善・サービス向上に活かします。</p>
 
     <form>
-      <label>購入商品名:<br><input type="text" name="product"></label><br>
-      <label>満足度:<br>
-        <select name="satisfaction">
-          <option>とても満足</option>
-          <option>満足</option>
-          <option>普通</option>
-          <option>不満</option>
-        </select>
-      </label><br>
-      <label>ご意見:<br><textarea name="feedback"></textarea></label><br>
+      <input type="text" name="product" placeholder="購入商品名">
+      <select name="satisfaction">
+        <option>とても満足</option>
+        <option>満足</option>
+        <option>普通</option>
+        <option>不満</option>
+      </select>
+      <textarea name="feedback" placeholder="ご意見"></textarea>
       <button type="submit">送信する</button>
     </form>
+
     <a class="back" href="index.html">← ホームへ戻る</a>
   </div>
 </body>
