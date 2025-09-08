@@ -108,20 +108,21 @@ a.back:hover {
 
 .sns-icons {
   margin-top: 10px;
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  gap: 12px;              /* アイコン間の間隔 */
 }
 
 .sns-icon {
-  width: 30px;      /* アイコンサイズ */
-  height: 30px;
-  margin: 0 6px;
-  vertical-align: middle;
+  width: 36px;     /* 横幅固定 */
+  height: 36px;    /* 高さ固定 */
+  object-fit: contain; /* 元画像比率を維持 */
   transition: transform 0.2s;
 }
 
 .sns-icon:hover {
   transform: scale(1.2);
 }
-
 
 /* レスポンシブ */
 @media (max-width: 375px) {
