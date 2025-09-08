@@ -7,27 +7,33 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>④ レビュー投稿</h1>
-  </header>
-  <div class="container">
-    <img src="assets/img/review.jpg" alt="レビュー" class="hero">
-    <p>ご購入商品のレビューを投稿してください。</p>
-    <form>
-      <label>ニックネーム:<br><input type="text" name="name"></label><br>
-      <label>評価:<br>
-        <select name="rating">
-          <option>★★★★★</option>
-          <option>★★★★☆</option>
-          <option>★★★☆☆</option>
-          <option>★★☆☆☆</option>
-          <option>★☆☆☆☆</option>
-        </select>
-      </label><br>
-      <label>コメント:<br><textarea name="review"></textarea></label><br>
-      <button type="submit">投稿する</button>
-    </form>
-    <a class="back" href="index.html">← ホームへ戻る</a>
+
+<header>④ レビュー投稿</header>
+
+<div class="container">
+  <h1>あなたのレビューを投稿してください</h1>
+  <p class="description">
+    商品の感想や評価を投稿して、他のお客様にも参考にしてもらいましょう。
+  </p>
+
+  <form>
+    <input type="text" placeholder="お名前">
+    <textarea placeholder="レビュー内容"></textarea>
+    <button type="submit">送信する</button>
+  </form>
+
+  <a class="back" href="index.html">← ホームへ戻る</a>
+</div>
+
+<div class="footer">
+  <p>株式会社サンプル商事</p>
+  <p>〒123-4567 東京都港区芝公園1-2-3</p>
+  <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
+  <div class="sns-icons">
+    <a href="https://www.instagram.com" target="_blank"><img src="assets/img/insta.png" alt="Instagram"></a>
+    <a href="https://line.me" target="_blank"><img src="assets/img/line.png" alt="LINE"></a>
   </div>
+</div>
+
 </body>
 </html>
