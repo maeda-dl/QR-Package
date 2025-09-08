@@ -107,25 +107,23 @@ a.back:hover {
 }
 
 .sns-icons {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 12px;
+  margin-top: 10px;
 }
 
 .sns-icons img {
-  width: 28px;      /* 固定幅 */
-  height: 28px;     /* 固定高さ */
-  display: block;   /* インラインスペースを消す */
+  width: 28px;   /* 強制的に横幅28px */
+  height: 28px;  /* 強制的に高さ28px */
+  display: block;
+  object-fit: contain; /* 縦横比維持 */
   transition: transform 0.2s;
 }
 
 .sns-icons img:hover {
   transform: scale(1.2);
 }
-
-
-
 
 /* レスポンシブ */
 @media (max-width: 375px) {
