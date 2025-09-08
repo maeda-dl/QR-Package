@@ -7,35 +7,31 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>⑧ 診断コンテンツ</h1>
-  </header>
-  <div class="container">
-    <img src="assets/img/diagnosis.jpg" alt="診断" class="hero">
-    <p>質問に答えておすすめ商品をチェック！</p>
-    <form onsubmit="diagnose(event)">
-      <label>好きな色は？<br>
-        <select id="color">
-          <option value="red">赤</option>
-          <option value="blue">青</option>
-          <option value="green">緑</option>
-        </select>
-      </label><br>
-      <button type="submit">診断する</button>
-    </form>
-    <p id="diagnosis"></p>
-    <a class="back" href="index.html">← ホームへ戻る</a>
+
+<header>⑧ 診断コンテンツ</header>
+
+<div class="container">
+  <h1>あなたにピッタリの商品は？</h1>
+  <p class="description">
+    簡単な質問でおすすめ商品を診断します。
+  </p>
+
+  <div style="text-align:center; margin:20px 0;">
+    <button>診断を始める</button>
   </div>
-  <script>
-    function diagnose(e) {
-      e.preventDefault();
-      const color = document.getElementById("color").value;
-      let message = "";
-      if(color==="red") message="情熱的な商品がおすすめです！";
-      if(color==="blue") message="爽やかな商品がおすすめです！";
-      if(color==="green") message="自然派商品がおすすめです！";
-      document.getElementById("diagnosis").innerText = message;
-    }
-  </script>
+
+  <a class="back" href="index.html">← ホームへ戻る</a>
+</div>
+
+<div class="footer">
+  <p>株式会社サンプル商事</p>
+  <p>〒123-4567 東京都港区芝公園1-2-3</p>
+  <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
+  <div class="sns-icons">
+    <a href="https://www.instagram.com" target="_blank"><img src="assets/img/insta.png" alt="Instagram"></a>
+    <a href="https://line.me" target="_blank"><img src="assets/img/line.png" alt="LINE"></a>
+  </div>
+</div>
+
 </body>
 </html>
