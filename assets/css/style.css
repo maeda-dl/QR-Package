@@ -113,28 +113,17 @@ a.back:hover {
   gap: 12px;
 }
 
-.sns-icon-wrapper {
-  width: 36px;       /* 固定サイズ */
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 6px; /* 角丸 */
-}
-
-.sns-icon-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* 枠内で中央に収める */
+.sns-icons img {
+  width: 28px;       /* LINEと同じサイズに固定 */
+  height: 28px;
+  object-fit: contain; /* 元画像比率を保持 */
   display: block;
   transition: transform 0.2s;
 }
 
-.sns-icon-wrapper img:hover {
+.sns-icons img:hover {
   transform: scale(1.2);
 }
-
 
 
 /* レスポンシブ */
