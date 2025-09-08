@@ -54,3 +54,35 @@ a.back {
 a.back:hover {
   text-decoration: underline;
 }
+.footer {
+  background: #f0f0f0;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 25px;
+}
+
+.footer a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.sns-icons {
+  margin-top: 8px;
+}
+
+.sns-icons a {
+  margin: 0 5px;
+  font-size: 1.2em;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.sns-icons a:hover {
+  transform: scale(1.2);
+}
