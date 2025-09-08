@@ -4,18 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>② くじ引き</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* LP1のCSSをそのままコピー */
+    body {margin:0; font-family:"Helvetica Neue",Arial,sans-serif; background:#fefefe; color:#333;}
+    header {background:#4CAF50; color:white; text-align:center; padding:16px 0; font-size:1.4em; font-weight:bold; box-shadow:0 3px 6px rgba(0,0,0,0.1);}
+    .container {padding:20px 15px;}
+    h1{text-align:center; font-size:1.3em; margin-bottom:12px; color:#333;}
+    p.description{text-align:center; font-size:0.95em; margin-bottom:25px; line-height:1.5; color:#666;}
+    button{background:linear-gradient(45deg,#4CAF50,#66BB6A); color:white; font-size:1em; font-weight:bold; padding:12px 0; border:none; border-radius:12px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:all 0.3s;}
+    button:hover{background:linear-gradient(45deg,#388E3C,#43A047); transform:translateY(-2px); box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    a.back{display:block; text-align:center; margin-top:25px; color:#2196F3; font-weight:bold; text-decoration:none; font-size:0.95em;}
+    a.back:hover{text-decoration:underline;}
+    .footer{background:#f0f0f0; padding:18px 10px; text-align:center; font-size:0.8em; color:#555; margin-top:30px;}
+    .footer a{color:#2196F3; text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .sns-icons{margin-top:10px;}
+    .sns-icons a{margin:0 6px; display:inline-block; transition:transform 0.2s;}
+    .sns-icons a img{width:28px; height:28px; display:block;}
+    .sns-icons a:hover{transform:scale(1.2);}
+    @media(max-width:375px){h1{font-size:1.15em;} p.description{font-size:0.9em;} button{font-size:0.95em;}}
+  </style>
 </head>
 <body>
 
 <header>② くじ引き</header>
 
 <div class="container">
-  <h1>運試し！くじ引きにチャレンジ</h1>
-  <p class="description">
-    今日の運勢をくじでチェック！<br>
-    簡単に楽しめるくじ引きです。
-  </p>
+  <h1>運試し！くじを引いてみよう</h1>
+  <p class="description">今日の運勢をチェックしてみましょう。</p>
 
   <div style="text-align:center; margin:20px 0;">
     <button id="drawBtn">くじを引く</button>
@@ -26,31 +42,24 @@
   <a class="back" href="index.html">← ホームへ戻る</a>
 </div>
 
-<!-- フッター共通 -->
 <div class="footer">
   <p>株式会社サンプル商事</p>
   <p>〒123-4567 東京都港区芝公園1-2-3</p>
   <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
   <div class="sns-icons">
-    <a href="https://www.instagram.com" target="_blank">
-      <img src="assets/img/insta.png" alt="Instagram">
-    </a>
-    <a href="https://line.me" target="_blank">
-      <img src="assets/img/line.png" alt="LINE">
-    </a>
+    <a href="https://www.instagram.com" target="_blank"><img src="assets/img/insta.png" alt="Instagram"></a>
+    <a href="https://line.me" target="_blank"><img src="assets/img/line.png" alt="LINE"></a>
   </div>
 </div>
 
 <script>
-  // 簡単なくじ引きスクリプト
-  const drawBtn = document.getElementById('drawBtn');
-  const result = document.getElementById('result');
-  const prizes = ['大吉', '中吉', '小吉', '吉', '末吉'];
-
-  drawBtn.addEventListener('click', () => {
-    const randIndex = Math.floor(Math.random() * prizes.length);
-    result.textContent = `結果: ${prizes[randIndex]}`;
-  });
+const drawBtn = document.getElementById('drawBtn');
+const result = document.getElementById('result');
+const prizes = ['大吉','中吉','小吉','吉','末吉'];
+drawBtn.addEventListener('click',()=>{
+  const randIndex=Math.floor(Math.random()*prizes.length);
+  result.textContent=`結果: ${prizes[randIndex]}`;
+});
 </script>
 
 </body>
