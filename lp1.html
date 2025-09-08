@@ -4,135 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>① 購買アンケート</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 14px 0;
-      font-size: 1.3em;
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .container {
-      padding: 20px 15px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 15px;
-      color: #4CAF50;
-    }
-
-    p.description {
-      text-align: center;
-      font-size: 0.95em;
-      margin-bottom: 20px;
-      line-height: 1.4;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    input, select, textarea, button {
-      width: 100%;
-      padding: 10px 12px;
-      font-size: 0.95em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      outline: none;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: #4CAF50;
-      box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-    }
-
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    button {
-      background: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #388E3C;
-    }
-
-    a.back {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-      color: #2196F3;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 0.95em;
-    }
-
-    a.back:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 375px) {
-      h1 { font-size: 1.1em; }
-      p.description { font-size: 0.9em; }
-      button { font-size: 0.95em; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <header>① 購買アンケート</header>
+<header>① 購買アンケート</header>
 
-  <div class="container">
-    <h1>お客様の声をお聞かせください</h1>
-    <p class="description">
-      あなたの意見が商品改善・サービス向上に活かされます。<br>
-      ぜひ簡単なアンケートにご協力ください。
-    </p>
+<div class="container">
+  <h1>お客様の声をお聞かせください</h1>
+  <p class="description">
+    あなたの意見が商品改善・サービス向上に活かされます。<br>
+    簡単なアンケートにご協力ください。
+  </p>
 
-    <form>
-      <input type="text" name="product" placeholder="購入商品名">
-      <select name="satisfaction">
-        <option>とても満足</option>
-        <option>満足</option>
-        <option>普通</option>
-        <option>不満</option>
-      </select>
-      <textarea name="feedback" placeholder="ご意見"></textarea>
-      <button type="submit">送信する</button>
-    </form>
+  <form>
+    <input type="text" name="product" placeholder="購入商品名">
+    <select name="satisfaction">
+      <option>とても満足</option>
+      <option>満足</option>
+      <option>普通</option>
+      <option>不満</option>
+    </select>
+    <textarea name="feedback" placeholder="ご意見"></textarea>
+    <button type="submit">送信する</button>
+  </form>
 
-    <a class="back" href="index.html">← ホームへ戻る</a>
+  <a class="back" href="index.html">← ホームへ戻る</a>
+</div>
+
+<!-- フッター共通 -->
+<div class="footer">
+  <p>株式会社サンプル商事</p>
+  <p>〒123-4567 東京都港区芝公園1-2-3</p>
+  <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
+  <div class="sns-icons">
+    <a href="https://www.instagram.com" target="_blank">📸</a>
+    <a href="https://line.me" target="_blank">💬</a>
   </div>
-  <div class="footer">
-    <p>株式会社サンプル商事</p>
-    <p>〒123-4567 東京都港区芝公園1-2-3</p>
-    <p>TEL: 03-1234-5678 | <a href="https://www.example.com" target="_blank">ホームページ</a></p>
-    <div class="sns-icons">
-      <a href="https://www.instagram.com" target="_blank">📸</a>
-      <a href="https://line.me" target="_blank">💬</a>
-    </div>
-  </div>
+</div>
+
 </body>
 </html>
