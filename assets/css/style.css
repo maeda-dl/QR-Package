@@ -113,10 +113,11 @@ a.back:hover {
   gap: 12px;
 }
 
+/* 枠内に全体を収める場合の例 */
 .sns-icons img {
-  width: 28px;      /* 横幅固定 */
-  height: 28px;     /* 高さ固定 */
-  object-fit: cover; /* 枠いっぱいに収める */
+  width: 28px;
+  height: 28px;
+  object-fit: contain; /* 縦横比を保ちつつ枠に収める */
   display: block;
   transition: transform 0.2s;
 }
