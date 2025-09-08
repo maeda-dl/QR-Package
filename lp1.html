@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>① 購買アンケート</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #fff; }
+    h1 { color: #4CAF50; }
+    .back { margin-top: 20px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h1>① 購買アンケート</h1>
+  <p>お客様の声をお聞かせください。商品改善・サービス向上に活かしてまいります。</p>
+  
+  <form>
+    <label>購入商品名:<br><input type="text" name="product"></label><br><br>
+    <label>満足度:<br>
+      <select name="satisfaction">
+        <option>とても満足</option>
+        <option>満足</option>
+        <option>普通</option>
+        <option>不満</option>
+      </select>
+    </label><br><br>
+    <label>ご意見:<br><textarea name="feedback"></textarea></label><br><br>
+    <button type="submit">送信する</button>
+  </form>
+
+  <a class="back" href="index.html">← ホームへ戻る</a>
+</body>
+</html>
