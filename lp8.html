@@ -4,7 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>⑧ 診断コンテンツ</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:#fefefe;color:#333;}
+    header {background:#4CAF50;color:white;text-align:center;padding:16px 0;font-size:1.4em;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);}
+    .container {padding:20px 15px;}
+    h1{text-align:center;font-size:1.3em;margin-bottom:12px;color:#333;}
+    p.description{text-align:center;font-size:0.95em;margin-bottom:25px;line-height:1.5;color:#666;}
+    form{display:flex;flex-direction:column;gap:14px;}
+    select,input{width:100%;padding:12px 15px;font-size:0.95em;border-radius:10px;border:1px solid #ccc;box-sizing:border-box;transition:all 0.3s;}
+    select:focus,input:focus{border-color:#4CAF50;box-shadow:0 0 8px rgba(76,175,80,0.2);}
+    button{background:linear-gradient(45deg,#4CAF50,#66BB6A);color:white;font-size:1em;font-weight:bold;padding:12px 0;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:all 0.3s;}
+    button:hover{background:linear-gradient(45deg,#388E3C,#43A047);transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    a.back{display:block;text-align:center;margin-top:25px;color:#2196F3;font-weight:bold;text-decoration:none;font-size:0.95em;}
+    a.back:hover{text-decoration:underline;}
+    .footer{background:#f0f0f0;padding:18px 10px;text-align:center;font-size:0.8em;color:#555;margin-top:30px;}
+    .footer a{color:#2196F3;text-decoration:none;}
+    .footer a:hover{text-decoration:underline;}
+    .sns-icons{margin-top:10px;}
+    .sns-icons a{margin:0 6px;display:inline-block;transition:transform 0.2s;}
+    .sns-icons a img{width:28px;height:28px;display:block;}
+    .sns-icons a:hover{transform:scale(1.2);}
+    @media(max-width:375px){h1{font-size:1.15em;}p.description{font-size:0.9em;}button{font-size:0.95em;}}
+  </style>
 </head>
 <body>
 
@@ -12,13 +33,27 @@
 
 <div class="container">
   <h1>あなたにピッタリの商品は？</h1>
-  <p class="description">
-    簡単な質問でおすすめ商品を診断します。
-  </p>
+  <p class="description">簡単な質問に答えて、あなたにおすすめの商品を診断します。</p>
 
-  <div style="text-align:center; margin:20px 0;">
-    <button>診断を始める</button>
-  </div>
+  <form id="diagnosisForm">
+    <select required>
+      <option value="">年齢を選択</option>
+      <option value="20代">20代</option>
+      <option value="30代">30代</option>
+      <option value="40代">40代</option>
+      <option value="50代以上">50代以上</option>
+    </select>
+    <select required>
+      <option value="">趣味を選択</option>
+      <option value="スポーツ">スポーツ</option>
+      <option value="読書">読書</option>
+      <option value="旅行">旅行</option>
+      <option value="ゲーム">ゲーム</option>
+    </select>
+    <button type="button" id="diagnoseBtn">診断する</button>
+  </form>
+
+  <p id="diagnosisResult" style="text-align:center; font-weight:bold; color:#4CAF50; margin-top:15px;"></p>
 
   <a class="back" href="index.html">← ホームへ戻る</a>
 </div>
@@ -32,6 +67,21 @@
     <a href="https://line.me" target="_blank"><img src="assets/img/line.png" alt="LINE"></a>
   </div>
 </div>
+
+<script>
+const btn = document.getElementById('diagnoseBtn');
+const result = document.getElementById('diagnosisResult');
+btn.addEventListener('click', () => {
+  const form = document.getElementById('diagnosisForm');
+  const age = form.elements[0].value;
+  const hobby = form.elements[1].value;
+  if(!age || !hobby){
+    result.textContent = "年齢と趣味を選択してください。";
+    return;
+  }
+  result.textContent = `${age}で${hobby}が好きなあなたにおすすめの商品は「サンプル商品A」です！`;
+});
+</script>
 
 </body>
 </html>
