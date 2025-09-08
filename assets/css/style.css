@@ -114,9 +114,9 @@ a.back:hover {
 }
 
 .sns-icons img {
-  width: 28px;       /* LINEと同じサイズに固定 */
-  height: 28px;
-  object-fit: contain; /* 元画像比率を保持 */
+  width: 28px;      /* 横幅固定 */
+  height: 28px;     /* 高さ固定 */
+  object-fit: cover; /* 枠いっぱいに収める */
   display: block;
   transition: transform 0.2s;
 }
@@ -124,6 +124,7 @@ a.back:hover {
 .sns-icons img:hover {
   transform: scale(1.2);
 }
+
 
 
 /* レスポンシブ */
