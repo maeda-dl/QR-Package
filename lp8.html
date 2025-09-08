@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⑧ 診断コンテンツ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>⑧ 診断コンテンツ</h1>
+  </header>
+  <div class="container">
+    <img src="assets/img/diagnosis.jpg" alt="診断" class="hero">
+    <p>質問に答えておすすめ商品をチェック！</p>
+    <form onsubmit="diagnose(event)">
+      <label>好きな色は？<br>
+        <select id="color">
+          <option value="red">赤</option>
+          <option value="blue">青</option>
+          <option value="green">緑</option>
+        </select>
+      </label><br>
+      <button type="submit">診断する</button>
+    </form>
+    <p id="diagnosis"></p>
+    <a class="back" href="index.html">← ホームへ戻る</a>
+  </div>
+  <script>
+    function diagnose(e) {
+      e.preventDefault();
+      const color = document.getElementById("color").value;
+      let message = "";
+      if(color==="red") message="情熱的な商品がおすすめです！";
+      if(color==="blue") message="爽やかな商品がおすすめです！";
+      if(color==="green") message="自然派商品がおすすめです！";
+      document.getElementById("diagnosis").innerText = message;
+    }
+  </script>
+</body>
+</html>
